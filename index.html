@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="main.css" />
+    <title>게임 모음</title>
+  </head>
+  <body>
+    <div>
+      <p><span id="firstNum"></span>곱하기 <span id="secondNum"></span>는?</p>
+      <form id="submit">
+        <input type="number" id="write" /><button>입력!</button>
+      </form>
+      <p id="end"></p>
+    </div>
+    <div>
+      <h2>숫자 야구 게임</h2>
+      <form id="baseball">
+        <input id="baseball_input" type="number" /><button>입력!</button
+        ><button>새 게임</button>
+      </form>
+      <p id="record"></p>
+      <span id="baseball_strike"></span><span id="baseball_ball"></span
+      ><span id="baseball_out"></span>
+    </div>
+    <script type="text/javascript" src="multifly.js"></script>
+    <script type="text/javascript" src="baseball.js"></script>
+  </body>
+</html>
