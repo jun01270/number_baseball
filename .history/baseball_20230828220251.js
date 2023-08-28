@@ -60,11 +60,6 @@ const sbo = () => {
   } else if (strike === 0 && ball === 0 && out === 3) {
     $baseball_strike.append(document.createElement("br"), `O O O`);
   }
-  console.log(strike);
-  console.log(ball);
-  console.log(out);
-  console.log(answer);
-  console.log($baseball_input.value);
 };
 
 const baseball = (e) => {
@@ -89,14 +84,7 @@ const baseball = (e) => {
 
 const reset = () => {
   all = [];
-
-  for (let i = 0; i < 3; i++) {
-    const index = Math.floor(Math.random() * randomNumber.length);
-    answer.push(randomNumber[index]);
-    randomNumber.splice(index, 1);
-  }
-  console.log(answer);
 };
 
 $baseball.addEventListener("submit", baseball);
-$new_baseball.addEventListener("click", reset);
+$new_baseball.addEventListener("click");

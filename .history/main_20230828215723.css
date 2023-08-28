@@ -1,10 +1,10 @@
+button {
+  margin-left: 5px;
+}
+
 #baseball {
   float: left;
   width: 500px;
-}
-
-#enter {
-  margin-left: 5px;
 }
 
 #new_baseball {

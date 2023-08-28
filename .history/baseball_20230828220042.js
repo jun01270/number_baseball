@@ -5,12 +5,11 @@ const $new_baseball = document.querySelector("#new_baseball");
 const $record = document.querySelector("#record");
 let all = [];
 let randomNumber = [];
-const answer = [];
-
 for (let n = 0; n <= 9; n += 1) {
   randomNumber.push(n);
 }
 
+const answer = [];
 for (let i = 0; i < 3; i++) {
   const index = Math.floor(Math.random() * randomNumber.length);
   answer.push(randomNumber[index]);
@@ -21,10 +20,13 @@ const sbo = () => {
   let strike = 0;
   let ball = 0;
   let out = 0;
+
   const array = Array.from($baseball_input.value);
   const value = array.map((x) => Number(x));
   all.push($baseball_input.value);
   record.innerHTML = `${all}`;
+  console.log("정답은: ", answer.join(""));
+  console.log("입력한 값은: ", value.join(""));
   if (answer.join("") === value.join("")) {
     alert("홈런!");
     $baseball_strike.append(document.createElement("br"), `S S S`);
@@ -60,11 +62,6 @@ const sbo = () => {
   } else if (strike === 0 && ball === 0 && out === 3) {
     $baseball_strike.append(document.createElement("br"), `O O O`);
   }
-  console.log(strike);
-  console.log(ball);
-  console.log(out);
-  console.log(answer);
-  console.log($baseball_input.value);
 };
 
 const baseball = (e) => {
@@ -87,16 +84,4 @@ const baseball = (e) => {
   }
 };
 
-const reset = () => {
-  all = [];
-
-  for (let i = 0; i < 3; i++) {
-    const index = Math.floor(Math.random() * randomNumber.length);
-    answer.push(randomNumber[index]);
-    randomNumber.splice(index, 1);
-  }
-  console.log(answer);
-};
-
 $baseball.addEventListener("submit", baseball);
-$new_baseball.addEventListener("click", reset);

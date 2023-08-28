@@ -64,7 +64,6 @@ const sbo = () => {
   console.log(ball);
   console.log(out);
   console.log(answer);
-  console.log($baseball_input.value);
 };
 
 const baseball = (e) => {

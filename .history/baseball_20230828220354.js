@@ -60,11 +60,6 @@ const sbo = () => {
   } else if (strike === 0 && ball === 0 && out === 3) {
     $baseball_strike.append(document.createElement("br"), `O O O`);
   }
-  console.log(strike);
-  console.log(ball);
-  console.log(out);
-  console.log(answer);
-  console.log($baseball_input.value);
 };
 
 const baseball = (e) => {
